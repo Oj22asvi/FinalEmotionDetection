@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emotion-based Diary</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#app-container {
+  background-color: #ff6600;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 600px;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#journal-log {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+#journal-log li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+#journal-log li:nth-child(odd) {
+  background-color: #f7f7f7;
+}
+
+#journal-log li span {
+  font-weight: bold;
+}
+
+  </style>
+  <script src="https://unpkg.com/compromise"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app-container">
+    <h2>Write Your Diary Entry</h2>
+    <textarea id="diary-entry" placeholder="Write your thoughts here..." rows="5"></textarea><br>
+    <button id="analyze-btn">Analyze Mood</button>
+    <h3>Detected Mood: <span id="mood"></span></h3>
+    <h3>Your Diary Log:</h3>
+    <ul id="journal-log"></ul>
+  </div>
+
+  <script src="test-detection.js"></script>
+</body>
+</html>
+
+
